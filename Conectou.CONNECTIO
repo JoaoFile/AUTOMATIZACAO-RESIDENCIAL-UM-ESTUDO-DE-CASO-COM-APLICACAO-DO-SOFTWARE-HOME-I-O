@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ConnectIO Version="Beta v1.2.7">
+  <Properties CycleTime="10" />
+  <Diagram DiagramPosition="-550,-32" DiagramScale="0.458111521991399">
+    <NodeData Key="3" Location="-430 110" NodeType="BooleanSource" ButtonChecked="True" />
+    <NodeData Key="7" Location="-470 290" NodeType="NumericalSource" OutSource="501" SourceValue="501" MinValue="0" MaxValue="10000" />
+    <NodeData Key="4" Location="-50 -640" NodeType="InternalCustomNode" AssemblyName="Modbus TCP-IP" NodeID="ConnectIO.Plugins.Modbus.ReadRegisterChunk" />
+    <NodeData Key="13" Location="970 360" NodeType="InternalCustomNode" AssemblyName="Function Blocks" NodeID="ConnectIO.Plugins.FunctionBlocks.Mul" />
+    <NodeData Key="14" Location="790 450" NodeType="NumericalSource" OutSource="100" SourceValue="100" MinValue="0" MaxValue="10000" />
+    <NodeData Key="21" Location="380 470" NodeType="InternalCustomNode" AssemblyName="Modbus TCP-IP" NodeID="ConnectIO.Plugins.Modbus.WriteDiscreteChunk" />
+    <NodeData Key="25" Location="430 590" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Leitura de entradas tipo BOOL" TextBoxWidth="100" TextBoxHeight="90" />
+    <NodeData Key="27" Location="-30 -600" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Escrita tipo INT/FLOAT" TextBoxWidth="100" TextBoxHeight="60" />
+    <NodeData Key="32" Location="350 770" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Leitura de luminosidade (valor multiplicado por 100 por ser muito pequeno)" TextBoxWidth="186" TextBoxHeight="160" />
+    <NodeData Key="8" Location="820 -420" NodeType="InternalCustomNode" AssemblyName="Modbus TCP-IP" NodeID="ConnectIO.Plugins.Modbus.ReadDiscreteChunk" />
+    <NodeData Key="10" Location="840 -380" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Escrita tipo BOOL." TextBoxWidth="110" TextBoxHeight="60" />
+    <NodeData Key="12" Location="840 -540" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Atuação nas janelas (abertura)" TextBoxWidth="130" TextBoxHeight="120" />
+    <NodeData Key="5" Location="-310 180" NodeType="InternalCustomNodeAsync" AssemblyName="Modbus TCP-IP" NodeID="ConnectIO.Plugins.Modbus.Server" />
+    <NodeData Key="35" Location="1110 40" NodeType="InternalCustomNode" AssemblyName="Modbus TCP-IP" NodeID="ConnectIO.Plugins.Modbus.WriteRegisterChunk" />
+    <NodeData Key="41" Location="170 490" NodeType="NumericalSource" OutSource="40" SourceValue="40" MinValue="0" MaxValue="10000" />
+    <NodeData Key="24" Location="610 -320" NodeType="NumericalSource" OutSource="10" SourceValue="10" MinValue="0" MaxValue="10000" />
+    <NodeData Key="42" Location="-1530 -760" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Offset será um incrimento ao valor da saída/entrada, por exemplo, se a saída/entrada for &quot;5&quot; e offset = 0 na programação devemos ler/escrever no endereço 5, caso o offset tenha algum valor atribuído o endereço a ser escrito/lido será de offset + valor do slot selecionado aqui no conncet io, seguindo o mesmo exemplo, com um offset de 500 o endereço a ser lido seria o 505." TextBoxWidth="320" TextBoxHeight="270" />
+    <NodeData Key="43" Location="-1180 -760" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Para leituras de Tags do tipo &quot;BIT&quot;, no visual studio, utilizar o comando &quot;readdiscreteinputs&quot;.                                 Para a escrita o comando &quot;writesinglecoil&quot;" TextBoxWidth="370" TextBoxHeight="100" />
+    <NodeData Key="11" Location="1080 -600" NodeType="OutputBit" MemMapAddress="1" />
+    <NodeData Key="15" Location="1080 -520" NodeType="OutputBit" MemMapAddress="3" />
+    <NodeData Key="16" Location="1080 -440" NodeType="OutputBit" MemMapAddress="5" />
+    <NodeData Key="29" Location="1090 -360" NodeType="OutputBit" MemMapAddress="7" />
+    <NodeData Key="30" Location="1090 -280" NodeType="OutputBit" MemMapAddress="42" />
+    <NodeData Key="31" Location="1090 -200" NodeType="OutputBit" MemMapAddress="55" />
+    <NodeData Key="33" Location="820 -910" NodeType="InternalCustomNode" AssemblyName="Modbus TCP-IP" NodeID="ConnectIO.Plugins.Modbus.ReadDiscreteChunk" />
+    <NodeData Key="34" Location="840 -1010" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Atuação nas janelas (fechamento)" TextBoxWidth="130" TextBoxHeight="100" />
+    <NodeData Key="50" Location="610 -810" NodeType="NumericalSource" OutSource="20" SourceValue="20" MinValue="0" MaxValue="10000" />
+    <NodeData Key="44" Location="1070 -1090" NodeType="OutputBit" MemMapAddress="2" />
+    <NodeData Key="45" Location="1070 -1010" NodeType="OutputBit" MemMapAddress="4" />
+    <NodeData Key="46" Location="1070 -940" NodeType="OutputBit" MemMapAddress="6" />
+    <NodeData Key="47" Location="1070 -870" NodeType="OutputBit" MemMapAddress="8" />
+    <NodeData Key="48" Location="1070 -800" NodeType="OutputBit" MemMapAddress="43" />
+    <NodeData Key="49" Location="1070 -730" NodeType="OutputBit" MemMapAddress="56" />
+    <NodeData Key="51" Location="780 -130" NodeType="NumericalSource" OutSource="30" SourceValue="30" MinValue="0" MaxValue="10000" />
+    <NodeData Key="52" Location="-800 -760" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="No visual studio para fazer leituras de &quot;Write Registers&quot; aqui do connect i/o, utilizar o comando ReadInputRegisters" TextBoxWidth="300" TextBoxHeight="100" />
+    <NodeData Key="6" Location="760 340" NodeType="InputFloat" MemMapAddress="0" />
+    <NodeData Key="9" Location="680 350" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Luminosidade da sala" TextBoxWidth="120" TextBoxHeight="60" />
+    <NodeData Key="26" Location="970 510" NodeType="InternalCustomNode" AssemblyName="Function Blocks" NodeID="ConnectIO.Plugins.FunctionBlocks.Mul" />
+    <NodeData Key="53" Location="790 600" NodeType="NumericalSource" OutSource="100" SourceValue="100" MinValue="0" MaxValue="10000" />
+    <NodeData Key="54" Location="760 500" NodeType="InputFloat" MemMapAddress="12" />
+    <NodeData Key="55" Location="680 520" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Luminosidade da Cozinha" TextBoxWidth="120" TextBoxHeight="60" />
+    <NodeData Key="56" Location="970 670" NodeType="InternalCustomNode" AssemblyName="Function Blocks" NodeID="ConnectIO.Plugins.FunctionBlocks.Mul" />
+    <NodeData Key="57" Location="790 770" NodeType="NumericalSource" OutSource="100" SourceValue="100" MinValue="0" MaxValue="10000" />
+    <NodeData Key="58" Location="760 660" NodeType="InputFloat" MemMapAddress="24" />
+    <NodeData Key="59" Location="680 680" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Luminosidade da comodo E" TextBoxWidth="120" TextBoxHeight="60" />
+    <NodeData Key="60" Location="970 840" NodeType="InternalCustomNode" AssemblyName="Function Blocks" NodeID="ConnectIO.Plugins.FunctionBlocks.Mul" />
+    <NodeData Key="61" Location="790 940" NodeType="NumericalSource" OutSource="100" SourceValue="100" MinValue="0" MaxValue="10000" />
+    <NodeData Key="62" Location="760 830" NodeType="InputFloat" MemMapAddress="139" />
+    <NodeData Key="63" Location="680 850" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Luminosidade externa" TextBoxWidth="120" TextBoxHeight="60" />
+    <NodeData Key="64" Location="180 -790" NodeType="OutputFloat" MemMapAddress="32" />
+    <NodeData Key="65" Location="320 -770" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Cozinha" TextBoxWidth="130" TextBoxHeight="50" />
+    <NodeData Key="66" Location="180 -700" NodeType="OutputFloat" MemMapAddress="33" />
+    <NodeData Key="67" Location="320 -680" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="cozinha x Banheiro" TextBoxWidth="160" TextBoxHeight="50" />
+    <NodeData Key="68" Location="-20 -720" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Luzes interna" TextBoxWidth="100" TextBoxHeight="80" />
+    <NodeData Key="69" Location="180 -620" NodeType="OutputFloat" MemMapAddress="0" />
+    <NodeData Key="70" Location="320 -600" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Sala" TextBoxWidth="130" TextBoxHeight="50" />
+    <NodeData Key="71" Location="180 -530" NodeType="OutputFloat" MemMapAddress="44" />
+    <NodeData Key="72" Location="320 -510" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Comodo E" TextBoxWidth="130" TextBoxHeight="50" />
+    <NodeData Key="73" Location="180 -440" NodeType="OutputFloat" MemMapAddress="66" />
+    <NodeData Key="74" Location="320 -420" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Corredor E x Quarto" TextBoxWidth="170" TextBoxHeight="50" />
+    <NodeData Key="75" Location="180 -350" NodeType="OutputFloat" MemMapAddress="78" />
+    <NodeData Key="76" Location="320 -330" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Quarto" TextBoxWidth="130" TextBoxHeight="50" />
+    <NodeData Key="77" Location="180 -260" NodeType="OutputFloat" MemMapAddress="56" />
+    <NodeData Key="78" Location="320 -230" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Garagem" TextBoxWidth="130" TextBoxHeight="50" />
+    <NodeData Key="79" Location="-260 -530" NodeType="NumericalSource" OutSource="50" SourceValue="50" MinValue="0" MaxValue="10000" />
+    <NodeData Key="17" Location="20 500" NodeType="InputBit" MemMapAddress="15" />
+    <NodeData Key="19" Location="-70 530" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Sala" TextBoxWidth="100" TextBoxHeight="50" />
+    <NodeData Key="22" Location="20 590" NodeType="InputBit" MemMapAddress="56" />
+    <NodeData Key="28" Location="-70 610" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Cozinha" TextBoxWidth="100" TextBoxHeight="50" />
+    <NodeData Key="80" Location="20 670" NodeType="InputBit" MemMapAddress="80" />
+    <NodeData Key="81" Location="-70 690" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Cômodo E" TextBoxWidth="100" TextBoxHeight="50" />
+    <NodeData Key="82" Location="20 760" NodeType="InputBit" MemMapAddress="119" />
+    <NodeData Key="84" Location="-140 780" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Corredor E x Quarto" TextBoxWidth="170" TextBoxHeight="50" />
+    <NodeData Key="83" Location="20 850" NodeType="InputBit" MemMapAddress="138" />
+    <NodeData Key="85" Location="-70 870" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Quarto" TextBoxWidth="100" TextBoxHeight="50" />
+    <NodeData Key="86" Location="20 940" NodeType="InputBit" MemMapAddress="98" />
+    <NodeData Key="87" Location="-70 960" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Garagem" TextBoxWidth="100" TextBoxHeight="50" />
+    <NodeData Key="18" Location="-310 1230" NodeType="NumericalSource" OutSource="60" SourceValue="60" MinValue="0" MaxValue="10000" />
+    <NodeData Key="2" Location="-140 1100" NodeType="InternalCustomNode" AssemblyName="Modbus TCP-IP" NodeID="ConnectIO.Plugins.Modbus.ReadDiscreteChunk" />
+    <NodeData Key="97" Location="-710 1510" NodeType="InternalMemoryFloat" MemMapAddress="139" />
+    <NodeData Key="98" Location="-700 580" NodeType="InternalMemoryFloat" MemMapAddress="140" />
+    <NodeData Key="99" Location="-830 680" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="azimuth abaixo de 110º abrir somente janela 1 e 2 e zenith abaixo de 45º abrir tudo" TextBoxWidth="186" TextBoxHeight="160" />
+    <NodeData Key="100" Location="-840 860" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Tentar controlar através de zenith abaixo de 51 ficar levantado, janela 1 e 2 só abaixa com zenith maior que 62" TextBoxWidth="186" TextBoxHeight="160" />
+    <NodeData Key="101" Location="-420 1420" NodeType="InternalCustomNode" AssemblyName="Modbus TCP-IP" NodeID="ConnectIO.Plugins.Modbus.WriteRegisterChunk" />
+    <NodeData Key="102" Location="-640 1420" NodeType="NumericalSource" OutSource="70" SourceValue="70" MinValue="0" MaxValue="10000" />
+    <NodeData Key="103" Location="440 340" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Luminosidade sala: 0,74" TextBoxWidth="186" TextBoxHeight="70" />
+    <NodeData Key="104" Location="490 520" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Cozinha 0,49" TextBoxWidth="186" TextBoxHeight="70" />
+    <NodeData Key="105" Location="500 690" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="E 0,49" TextBoxWidth="186" TextBoxHeight="70" />
+    <NodeData Key="106" Location="560 850" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="2,9" TextBoxWidth="120" TextBoxHeight="60" />
+    <NodeData Key="20" Location="440 1140" NodeType="InternalCustomNode" AssemblyName="Function Blocks" NodeID="ConnectIO.Plugins.FunctionBlocks.TOn" />
+    <NodeData Key="88" Location="590 1200" NodeType="OutputInt" MemMapAddress="0" />
+    <NodeData Key="89" Location="750 1100" NodeType="InternalCustomNode" AssemblyName="Function Blocks" NodeID="ConnectIO.Plugins.FunctionBlocks.TOn" />
+    <NodeData Key="90" Location="470 1300" NodeType="NumericalSource" OutSource="60000" SourceValue="60000" MinValue="0" MaxValue="3E+100" />
+    <NodeData Key="96" Location="910 1120" NodeType="OutputInt" MemMapAddress="1" />
+    <NodeData Key="107" Location="200 1100" NodeType="InternalCustomNode" AssemblyName="Function Blocks" NodeID="ConnectIO.Plugins.FunctionBlocks.Jk" />
+    <NodeData Key="91" Location="910 1420" NodeType="OutputInt" MemMapAddress="3" />
+    <NodeData Key="92" Location="750 1400" NodeType="InternalCustomNode" AssemblyName="Function Blocks" NodeID="ConnectIO.Plugins.FunctionBlocks.TOn" />
+    <NodeData Key="93" Location="590 1500" NodeType="OutputInt" MemMapAddress="2" />
+    <NodeData Key="94" Location="440 1440" NodeType="InternalCustomNode" AssemblyName="Function Blocks" NodeID="ConnectIO.Plugins.FunctionBlocks.TOn" />
+    <NodeData Key="95" Location="470 1600" NodeType="NumericalSource" OutSource="60000" SourceValue="60000" MinValue="0" MaxValue="3E+100" />
+    <NodeData Key="109" Location="200 1400" NodeType="InternalCustomNode" AssemblyName="Function Blocks" NodeID="ConnectIO.Plugins.FunctionBlocks.Jk" />
+    <NodeData Key="110" Location="800 1220" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Temporizador da Sala" TextBoxWidth="186" TextBoxHeight="60" />
+    <NodeData Key="111" Location="750 1520" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Temporizador da Cozinha" TextBoxWidth="186" TextBoxHeight="60" />
+    <NodeData Key="112" Location="910 1710" NodeType="OutputInt" MemMapAddress="5" />
+    <NodeData Key="113" Location="750 1690" NodeType="InternalCustomNode" AssemblyName="Function Blocks" NodeID="ConnectIO.Plugins.FunctionBlocks.TOn" />
+    <NodeData Key="114" Location="750 1810" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Comodo E" TextBoxWidth="186" TextBoxHeight="60" />
+    <NodeData Key="115" Location="590 1790" NodeType="OutputInt" MemMapAddress="4" />
+    <NodeData Key="116" Location="470 1890" NodeType="NumericalSource" OutSource="60000" SourceValue="60000" MinValue="0" MaxValue="3E+100" />
+    <NodeData Key="118" Location="440 1730" NodeType="InternalCustomNode" AssemblyName="Function Blocks" NodeID="ConnectIO.Plugins.FunctionBlocks.TOn" />
+    <NodeData Key="119" Location="200 1690" NodeType="InternalCustomNode" AssemblyName="Function Blocks" NodeID="ConnectIO.Plugins.FunctionBlocks.Jk" />
+    <NodeData Key="120" Location="1320 1110" NodeType="InternalCustomNode" AssemblyName="Modbus TCP-IP" NodeID="ConnectIO.Plugins.Modbus.WriteDiscreteChunk" />
+    <NodeData Key="121" Location="1370 1250" NodeType="NotesNode" TextFontSize="16" TextFontColor="Black" ObsText="Leituras dos temporizadores" TextBoxWidth="120" TextBoxHeight="70" />
+    <NodeData Key="122" Location="1090 1110" NodeType="NumericalSource" OutSource="80" SourceValue="80" MinValue="0" MaxValue="3E+100" />
+    <NodeData Key="38" Location="200 1590" NodeType="NumericalSource" OutSource="60000" SourceValue="60000" MinValue="0" MaxValue="3E+100" />
+    <NodeData Key="23" Location="210 1880" NodeType="NumericalSource" OutSource="60000" SourceValue="60000" MinValue="0" MaxValue="3E+100" />
+    <NodeData Key="36" Location="200 1290" NodeType="NumericalSource" OutSource="60000" SourceValue="60000" MinValue="0" MaxValue="3E+100" />
+    <LinkData From="14" To="13" FromPort="Out-Double-0" ToPort="In-Double-1" NodeType="LinkData" />
+    <LinkData From="5" To="8" FromPort="Out-String-1" ToPort="In-String-0" NodeType="LinkData" />
+    <LinkData From="5" To="21" FromPort="Out-String-1" ToPort="In-String-0" NodeType="LinkData" />
+    <LinkData From="5" To="4" FromPort="Out-String-1" ToPort="In-String-0" NodeType="LinkData" />
+    <LinkData From="7" To="5" FromPort="Out-Double-0" ToPort="In-Double-1" NodeType="LinkData" />
+    <LinkData From="3" To="5" FromPort="Out-Bit-0" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="5" To="35" FromPort="Out-String-1" ToPort="In-String-0" NodeType="LinkData" />
+    <LinkData From="41" To="21" FromPort="Out-Double-0" ToPort="In-Double-1" NodeType="LinkData" />
+    <LinkData From="24" To="8" FromPort="Out-Double-0" ToPort="In-Double-1" NodeType="LinkData" />
+    <LinkData From="8" To="11" FromPort="Out-Bit-0" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="8" To="15" FromPort="Out-Bit-1" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="8" To="16" FromPort="Out-Bit-2" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="8" To="29" FromPort="Out-Bit-3" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="8" To="30" FromPort="Out-Bit-4" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="8" To="31" FromPort="Out-Bit-5" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="5" To="33" FromPort="Out-String-1" ToPort="In-String-0" NodeType="LinkData" />
+    <LinkData From="50" To="33" FromPort="Out-Double-0" ToPort="In-Double-1" NodeType="LinkData" />
+    <LinkData From="33" To="45" FromPort="Out-Bit-1" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="33" To="46" FromPort="Out-Bit-2" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="33" To="47" FromPort="Out-Bit-3" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="33" To="48" FromPort="Out-Bit-4" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="33" To="49" FromPort="Out-Bit-5" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="51" To="35" FromPort="Out-Double-0" ToPort="In-Double-1" NodeType="LinkData" />
+    <LinkData From="33" To="44" FromPort="Out-Bit-0" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="13" To="35" FromPort="Out-Double-0" ToPort="In-Double-9" NodeType="LinkData" />
+    <LinkData From="6" To="13" FromPort="Out-Double-0" ToPort="In-Double-0" NodeType="LinkData" />
+    <LinkData From="53" To="26" FromPort="Out-Double-0" ToPort="In-Double-1" NodeType="LinkData" />
+    <LinkData From="54" To="26" FromPort="Out-Double-0" ToPort="In-Double-0" NodeType="LinkData" />
+    <LinkData From="26" To="35" FromPort="Out-Double-0" ToPort="In-Double-8" NodeType="LinkData" />
+    <LinkData From="57" To="56" FromPort="Out-Double-0" ToPort="In-Double-1" NodeType="LinkData" />
+    <LinkData From="58" To="56" FromPort="Out-Double-0" ToPort="In-Double-0" NodeType="LinkData" />
+    <LinkData From="56" To="35" FromPort="Out-Double-0" ToPort="In-Double-7" NodeType="LinkData" />
+    <LinkData From="61" To="60" FromPort="Out-Double-0" ToPort="In-Double-1" NodeType="LinkData" />
+    <LinkData From="60" To="35" FromPort="Out-Double-0" ToPort="In-Double-6" NodeType="LinkData" />
+    <LinkData From="4" To="64" FromPort="Out-Double-0" ToPort="In-Double-0" NodeType="LinkData" />
+    <LinkData From="4" To="66" FromPort="Out-Double-1" ToPort="In-Double-0" NodeType="LinkData" />
+    <LinkData From="4" To="69" FromPort="Out-Double-2" ToPort="In-Double-0" NodeType="LinkData" />
+    <LinkData From="4" To="71" FromPort="Out-Double-3" ToPort="In-Double-0" NodeType="LinkData" />
+    <LinkData From="4" To="73" FromPort="Out-Double-4" ToPort="In-Double-0" NodeType="LinkData" />
+    <LinkData From="4" To="75" FromPort="Out-Double-5" ToPort="In-Double-0" NodeType="LinkData" />
+    <LinkData From="4" To="77" FromPort="Out-Double-6" ToPort="In-Double-0" NodeType="LinkData" />
+    <LinkData From="79" To="4" FromPort="Out-Double-0" ToPort="In-Double-1" NodeType="LinkData" />
+    <LinkData From="62" To="60" FromPort="Out-Double-0" ToPort="In-Double-0" NodeType="LinkData" />
+    <LinkData From="17" To="21" FromPort="Out-Bit-0" ToPort="In-Bit-2" NodeType="LinkData" />
+    <LinkData From="22" To="21" FromPort="Out-Bit-0" ToPort="In-Bit-3" NodeType="LinkData" />
+    <LinkData From="80" To="21" FromPort="Out-Bit-0" ToPort="In-Bit-4" NodeType="LinkData" />
+    <LinkData From="82" To="21" FromPort="Out-Bit-0" ToPort="In-Bit-5" NodeType="LinkData" />
+    <LinkData From="83" To="21" FromPort="Out-Bit-0" ToPort="In-Bit-6" NodeType="LinkData" />
+    <LinkData From="86" To="21" FromPort="Out-Bit-0" ToPort="In-Bit-7" NodeType="LinkData" />
+    <LinkData From="18" To="2" FromPort="Out-Double-0" ToPort="In-Double-1" NodeType="LinkData" />
+    <LinkData From="5" To="2" FromPort="Out-String-1" ToPort="In-String-0" NodeType="LinkData" />
+    <LinkData From="5" To="101" FromPort="Out-String-1" ToPort="In-String-0" NodeType="LinkData" />
+    <LinkData From="102" To="101" FromPort="Out-Double-0" ToPort="In-Double-1" NodeType="LinkData" />
+    <LinkData From="97" To="101" FromPort="Out-Double-0" ToPort="In-Double-2" NodeType="LinkData" />
+    <LinkData From="20" To="88" FromPort="Out-Double-1" ToPort="In-Double-0" NodeType="LinkData" />
+    <LinkData From="20" To="89" FromPort="Out-Bit-0" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="90" To="89" FromPort="Out-Double-0" ToPort="In-Double-1" NodeType="LinkData" />
+    <LinkData From="89" To="96" FromPort="Out-Double-1" ToPort="In-Double-0" NodeType="LinkData" />
+    <LinkData From="107" To="20" FromPort="Out-Bit-0" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="2" To="107" FromPort="Out-Bit-0" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="2" To="107" FromPort="Out-Bit-1" ToPort="In-Bit-2" NodeType="LinkData" />
+    <LinkData From="92" To="91" FromPort="Out-Double-1" ToPort="In-Double-0" NodeType="LinkData" />
+    <LinkData From="94" To="92" FromPort="Out-Bit-0" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="95" To="92" FromPort="Out-Double-0" ToPort="In-Double-1" NodeType="LinkData" />
+    <LinkData From="94" To="93" FromPort="Out-Double-1" ToPort="In-Double-0" NodeType="LinkData" />
+    <LinkData From="109" To="94" FromPort="Out-Bit-0" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="2" To="109" FromPort="Out-Bit-2" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="2" To="109" FromPort="Out-Bit-3" ToPort="In-Bit-2" NodeType="LinkData" />
+    <LinkData From="113" To="112" FromPort="Out-Double-1" ToPort="In-Double-0" NodeType="LinkData" />
+    <LinkData From="118" To="113" FromPort="Out-Bit-0" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="116" To="113" FromPort="Out-Double-0" ToPort="In-Double-1" NodeType="LinkData" />
+    <LinkData From="118" To="115" FromPort="Out-Double-1" ToPort="In-Double-0" NodeType="LinkData" />
+    <LinkData From="119" To="118" FromPort="Out-Bit-0" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="2" To="119" FromPort="Out-Bit-4" ToPort="In-Bit-0" NodeType="LinkData" />
+    <LinkData From="2" To="119" FromPort="Out-Bit-5" ToPort="In-Bit-2" NodeType="LinkData" />
+    <LinkData From="5" To="120" FromPort="Out-String-1" ToPort="In-String-0" NodeType="LinkData" />
+    <LinkData From="122" To="120" FromPort="Out-Double-0" ToPort="In-Double-1" NodeType="LinkData" />
+    <LinkData From="20" To="120" FromPort="Out-Bit-0" ToPort="In-Bit-2" NodeType="LinkData" />
+    <LinkData From="89" To="120" FromPort="Out-Bit-0" ToPort="In-Bit-3" NodeType="LinkData" />
+    <LinkData From="94" To="120" FromPort="Out-Bit-0" ToPort="In-Bit-4" NodeType="LinkData" />
+    <LinkData From="92" To="120" FromPort="Out-Bit-0" ToPort="In-Bit-5" NodeType="LinkData" />
+    <LinkData From="118" To="120" FromPort="Out-Bit-0" ToPort="In-Bit-6" NodeType="LinkData" />
+    <LinkData From="113" To="120" FromPort="Out-Bit-0" ToPort="In-Bit-7" NodeType="LinkData" />
+    <LinkData From="64" To="35" FromPort="Out-Double-0" ToPort="In-Double-2" NodeType="LinkData" />
+    <LinkData From="66" To="35" FromPort="Out-Double-0" ToPort="In-Double-3" NodeType="LinkData" />
+    <LinkData From="69" To="35" FromPort="Out-Double-0" ToPort="In-Double-4" NodeType="LinkData" />
+    <LinkData From="71" To="35" FromPort="Out-Double-0" ToPort="In-Double-5" NodeType="LinkData" />
+    <LinkData From="38" To="94" FromPort="Out-Double-0" ToPort="In-Double-1" NodeType="LinkData" />
+    <LinkData From="23" To="118" FromPort="Out-Double-0" ToPort="In-Double-1" NodeType="LinkData" />
+    <LinkData From="36" To="20" FromPort="Out-Double-0" ToPort="In-Double-1" NodeType="LinkData" />
+  </Diagram>
+</ConnectIO>
